@@ -1,6 +1,6 @@
 # Mura Tools Servlet
 
-The purpose of this plugin is to provide an embedded servlet engine (Tomcat) running Railo to enable running Mura CMS in a development environment completely from within Eclipse.
+The purpose of this plugin is to provide an embedded servlet engine (Tomcat or Jetty) running Railo to enable running Mura CMS in a development environment completely from within Eclipse.
 
 ## How to Contribute
 
