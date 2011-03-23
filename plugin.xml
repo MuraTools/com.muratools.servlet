@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="com.muratools.servlet.objectContributionContainerMenu"
+            objectClass="org.eclipse.core.resources.IContainer">
+         <menu
+               id="com.muratools.servlet.railoMenu"
+               label="Railo">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="com.muratools.servlet.actions.StopServer"
+               id="com.muratools.servlet.action.stopServer"
+               label="Stop Server"
+               menubarPath="com.muratools.servlet.railoMenu/group1"
+               tooltip="Stops the embedded Railo server">
+         </action>
+         <action
+               class="com.muratools.servlet.actions.StartServer"
+               id="com.muratools.servlet.action.startServer"
+               label="Start Server"
+               menubarPath="com.muratools.servlet.railoMenu/group1"
+               tooltip="Start the embedded Railo Server">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
