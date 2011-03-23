@@ -35,16 +35,23 @@ public class RailoServerControl {
 	}
 
 	public void initServer(String docBase) throws Exception{
+		println("Creating Server...");
 		server = new Server(port);
 		
+		println("Creating context...");
 		context = new WebAppContext();
+		println("Setting context descriptor to '/WEB-INF/web.xml'");
 		context.setDescriptor("/WEB-INF/web.xml");
+		println("Setting Resource Base (docBase) to: '" + docBase + "'");
 		context.setResourceBase(docBase);
+		println("Setting context path to '/'");
 		context.setContextPath("/");
 		context.setParentLoaderPriority(true);
 		
+		println("Setting the server's handler to the context");
 		server.setHandler(context);
 		
+		println("Starting the server...");
 		server.start();
 		server.join();
 	}
@@ -61,6 +68,10 @@ public class RailoServerControl {
 				server.join();
 			}
 		}
+	}
+	
+	private void println(String message){
+		System.out.println(message);
 	}
 	
 }
