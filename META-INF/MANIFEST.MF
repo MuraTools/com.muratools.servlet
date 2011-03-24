@@ -11,5 +11,9 @@ Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
  lib/jetty-all-7.3.1.v20110307.jar,
- lib/servlet-api-2.5.jar
-Import-Package: org.eclipse.core.resources
+ lib/servlet-api-2.5.jar,
+ lib/jetty-servlet-7.3.1.v20110307.jar,
+ lib/commons-io-2.0.1.jar
+Import-Package: org.apache.commons.el;version="1.0.0",
+ org.apache.jasper;version="5.5.17",
+ org.eclipse.core.resources
