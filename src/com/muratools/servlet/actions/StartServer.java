@@ -9,9 +9,7 @@ public class StartServer extends MuraToolsAction {
 	/**
 	 * @see IActionDelegate#run(IAction)
 	 */
-	public void run(IAction action) {
-		System.err.println("Starting server...");
-		
+	public void run(IAction action) {		
 		RailoServerControl rsc = new RailoServerControl();
 		try {
 			rsc.initServer(getTargetDirectory());
@@ -19,5 +17,4 @@ public class StartServer extends MuraToolsAction {
 			System.err.println(e.toString());
 		}
 	}
-	
 }
